@@ -16,6 +16,11 @@ a
     color:  rgb(0, 51, 0);
 }
 
+p
+{
+    padding: 10px;
+}
+
 .section
 {
     height: 100vh;
