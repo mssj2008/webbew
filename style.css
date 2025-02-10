@@ -92,14 +92,26 @@ p
     position: relative;
     margin: auto auto;
     top: 15%;
-    width: 65%;
+    width: 50%;
     min-height: 50%;
     border-radius: 20px;
+}
+
+.skill
+{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.skill > p
+{
+    margin-left: 10%;
 }
 
 .slider
 {
     height: 4px;
+    margin: auto;
     width: 80%;
     border: 3px solid black;
 }
