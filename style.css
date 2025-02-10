@@ -91,7 +91,6 @@ p
     grid-template-columns: auto auto;
     position: relative;
     margin: auto auto;
-    top: 15%;
     width: 50%;
     min-height: 50%;
     border-radius: 20px;
@@ -140,6 +139,8 @@ p
 
 .teste
 {
+    width: 25%;
+    aspect-ratio: 1 / 1;
     position: relative;
 }
 
@@ -149,4 +150,9 @@ p
     position: absolute;
     top: -15%;
     left: 35%;
+}
+
+.ttxt
+{
+    margin-top: 50px;
 }
