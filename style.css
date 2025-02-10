@@ -24,6 +24,7 @@ p
 
 .section
 {
+    position: relative;
     height: 100vh;
     width: 100vw;
 }
@@ -65,7 +66,10 @@ p
 
 .nav
 {
-    position: absolute;
+    z-index: 100;
+    background-color: rgb(51, 196, 51);
+    opacity: 0.9;
+    position: fixed;
     top: 0;
     width: 100vw;
     display: flex;
@@ -83,11 +87,41 @@ p
 
 .skills
 {
+    display: grid;
+    grid-template-columns: auto auto;
     position: relative;
-    top: 25%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto auto;
+    top: 15%;
     width: 65%;
     min-height: 50%;
     border-radius: 20px;
+}
+
+.slider
+{
+    height: 4px;
+    width: 80%;
+    border: 3px solid black;
+}
+
+.slider > div
+{
+    height: 4px;
+    width: 60%;
+    background-color: rgb(162, 103, 103);
+}
+
+.Projects
+{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    row-gap: 25px;
+    grid-template: 50% / 50% 50%;
+}
+
+.pjp
+{
+    margin: auto;
 }
