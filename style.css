@@ -157,7 +157,7 @@ p
 {
     height: auto;
     max-height: 40%;
-    overflow: scroll;
+    /*overflow: scroll;*/
     font-size: 75%;
     margin-top: 40px;
 }
