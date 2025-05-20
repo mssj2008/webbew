@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Sam Sam's Page</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/unnamed.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
@@ -16,22 +16,30 @@
   </head>
   <body>
     <div class = "nav shadow">
-      <a href="#_About">About</a>
-      <a href="#_Skills">Skills</a>
-      <a href="#_Projects">Projects</a>
-      <a href="#_testes">testes</a>
-      <a href="#_Contact">Contact</a>
+      <a href="#_About" class="navlink shadow hover">About</a>
+      <a href="#_Skills" class="navlink shadow hover">Skills</a>
+      <a href="#_Projects" class="navlink shadow hover">Projects</a>
+      <a href="#_testes" class="navlink shadow hover">Testimonials</a>
+      
     </div>
     <div class = "section flexcontain shadow" id="_About">
       
-      <div class="card shadow">
+      <div id="IDCard" class="card shadow">
         <img src="images/pfp.png" alt="bah" class = "circle">
-        <p style="text-align: center;">Sam Sam</p>
-        <p class="pfp-tag">Game Developer</p>
-        <p class="pfp-tag">Embedded Developer</p>
+        <p style="text-align: center; padding: 0px;">Sam Sam</p>
+        <div>
+          <a class="hover" href=""><i class="fa-brands fa-youtube fa-2x" style="color: #ff0000;"></i></a>
+          <a class="hover" href=""><i class="fa-brands fa-github fa-2x" style="color: #000000;"></i></a>
+          <a class="hover" href=""><i class="fa-brands fa-discord fa-2x" style="color: #5674e2;"></i></a>
+          <a class="hover" href=""><i class="fa-regular fa-envelope fa-2x" style="color: #ec1d28;"></i></a>
+        </div>
+        <p class="pfp-tag hover">Game Developer</p>
+        <p class="pfp-tag hover">Embedded Developer</p>
+        <p class="pfp-tag hover" style="margin-bottom: 0;">Video Editor</p>
       </div>
-      <div class="card shadow" style="width: 30%; min-height: 50%">
-        <p>Hi, I'm Sam</p>
+      <div id="description" class="card flexdown shadow" style="">
+        <p>Hi, I'm Sam<br>---Description---</p>
+        <a href="#_Contact"><button  class="project-button">I have a project</button></a>
       </div>
     </div>
     <div class = "section flexcontain shadow" id="_Skills">
@@ -43,34 +51,46 @@
             <div class="sliderfill"></div>
           </div>
         </div>
-        <div class="skill" amount="60">
-          <p>C</p>
-          <div class="slider">
-          <div class="sliderfill"></div>
-          </div>
-        </div>
-        <div class="skill" amount="95">
-          <p>C++</p>
-          <div class="slider">
-            <div class="sliderfill"></div>
-          </div>
-        </div>
-        <div class="skill" amount="70">
-          <p>C#</p>
-          <div class="slider">
-            <div class="sliderfill"></div>
-          </div>
-        </div>
-        <div class="skill" amount="30">
+        <div class="skill" amount="80">
           <p>Unity</p>
           <div class="slider">
             <div class="sliderfill"></div>
           </div>
         </div>
-        <div class="skill" amount="50">
+        <div class="skill" amount="75">
+          <p>C</p>
+          <div class="slider">
+          <div class="sliderfill"></div>
+          </div>
+        </div>
+        <div class="skill" amount="80">
+          <p>C#</p>
+          <div class="slider">
+            <div class="sliderfill"></div>
+          </div>
+        </div>
+        <div class="skill" amount="90">
           <p>Arduino</p>
           <div class="slider">
             <div class="sliderfill"></div> 
+          </div>
+        </div>
+        <div class="skill" amount="70">
+          <p>C++</p>
+          <div class="slider">
+            <div class="sliderfill"></div>
+          </div>
+        </div>
+        <div class="skill" amount="60">
+          <p>ARM</p>
+          <div class="slider">
+            <div class="sliderfill"></div> 
+          </div>
+        </div>
+        <div class="skill" amount="75">
+          <p>Davinci Resolve</p>
+          <div class="slider">
+            <div class="sliderfill"></div>
           </div>
         </div>
       </div>
@@ -78,50 +98,66 @@
     <div class = "section shadow" id="_Projects">
       <h1 style="width: 100%; text-align: center;">Projects</h1>
       <div class="Projects">
-        <img class="pjp" src="images/download.jpeg" alt="">
-        <img class="pjp" src="images/download.jpeg" alt="">
-        <img class="pjp" src="images/download.jpeg" alt="">
-        <img class="pjp" src="images/download.jpeg" alt="">
+        <div><img class="pjp hover" src="images/download.jpeg" alt="" data-project-id="project1"><p>Project 1</p></div>
+        <div><img class="pjp hover" src="images/Proj2.png" alt="" data-project-id="project2"><p>Project 2</p></div>
+        <div><img class="pjp hover" src="images/download.jpeg" alt="" data-project-id="project3"><p>Project 3</p></div>
+        <div><img class="pjp hover" src="images/0x0ss.png" alt="" data-project-id="project4"><p>Project 4</p></div>
       </div>
     </div>
     <div class = "section flexcontain shadow" id="_testes">
       <p style="position: absolute; top: 0;">Testimonials</p>
       <div class="card teste shadow">
         <div style="width: 100%; margin-top: -25%;"><img class="circle shadow" src="images/default-pfp.png" alt=""></div>
-        <p class="ttxt">Sam Devs is hands down the best Fiverr person I've worked with! Their work exceeded expectations with flawless execution and stellar documentation. Proactive communication and a deep understanding of electronics engineering made the entire process smooth and enjoyable. Highly recommend! 👍</p>
+        <p class="ttxt shadow">Sam Devs is hands down the best Fiverr person I've worked with! Their work exceeded expectations with flawless execution and stellar documentation. Proactive communication and a deep understanding of electronics engineering made the entire process smooth and enjoyable. Highly recommend! 👍</p>
         <p style="">- Johnathan Smoth</p>
       </div>
       <div class="card teste shadow">
         <div style="width: 100%; margin-top: -25%;"><img class="circle shadow" src="images/default-pfp.png" alt=""></div>
-        <p class="ttxt">Testimonial</p>
-        <p style="">- name of the dude</p>
+        <p class="ttxt shadow">Sam is a great Business partner, With Fluent skills and Effiency while Being Very Respectful and Professional. Glad we partners.</p>
+        <p style="">- Exoticcitron</p>
       </div>
       <div class="card teste shadow">
         <div style="width: 100%; margin-top: -25%;"><img class="circle shadow" src="images/default-pfp.png" alt=""></div>
-        <p class="ttxt">Sam is a great Business partner, With Fluent skills and Effiency while Being Very Respectful and Professional. Glad we partners.</p>
-        <p style="">- Exoticcitron</p>
+        <p class="ttxt shadow">I was impressed by Sam's commitment to his craft and his ability to deliver results on time. He is a true professional and I would highly recommend him to anyone looking for a skilled and reliable freelancer.</p>
+        <p style="">- Ahmod Shokry</p>
       </div>
     </div>
+    <button id="ContactBtn" onclick="window.location.href = '#_About'">Contact me!</button>
+    <!--
     <div class = "section flexcontain shadow" id="_Contact">
       <p style="position: absolute; top: 0;">Contact me!</p>
       <div class="Contact">
-        <a href="https://youtube.com" class="ContactItem">
+        <a href="https://youtube.com" class="ContactItem shadow">
           <i class="fa-brands fa-youtube fa-3x" style="color: #FF0000;"></i>
-          <p>Wanna see what I'm up to? Check out my Yotube!</p>
+          <p>Wanna see what I'm up to? Check out my Youtube!</p>
         </a>
-        <a class="ContactItem">
+        <a href="https://github.com" class="ContactItem shadow">
           <i class="fa-brands fa-github fa-3x"></i>
           <p>Check out more projects done by me on my Github!</p>
         </a>
-        <a class="ContactItem">
+        <a href="https://discord.com" class="ContactItem shadow">
           <i class="fa-brands fa-discord fa-3x" style="color: #7289da;"></i>
           <p>Wanna reachout? check out my Discord!</p>
         </a>
-        <a class="ContactItem">
-          <img src="images/fiverr.png" alt="" style="width: 25%;">
-          <p>Have a project in mind? Contact me on fiverr and I'll be glad to help!</p>
+        <a href="mailto:samsambaaah@gmail.com" class="ContactItem shadow">
+          <i class="fa-regular fa-envelope fa-3x" style="color: #ec1d28;"></i>
+          <p>Wanna Discuss a Project/Business Enquiry? Contact me on Email!</p>
         </a>
       </div>
+    </div>
+    -->
+    <div class="Portfolio shadow">
+      <div class="Pimg shadow" style="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+      <div class="Pdesc shadow" style="">
+        <h1 style="text-align: center;">Title</h1>
+        <p style="white-space: pre-line;">description</p>
+        <a style="display: block; text-align: center;">Link to pwoject</a>
+      </div>
+      <button id="pf_close">x</button>
     </div>
     <script src="index.js"></script>
   </body>

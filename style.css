@@ -1,71 +1,107 @@
-*
-{
+* {
     font-family: "Mochiy Pop P One", serif;
-  font-weight: 400;
-  font-style: normal;
-  scroll-behavior: smooth;
+    font-weight: 400;
+    font-style: normal;
+    scroll-behavior: smooth;
 }
 
-body
-{
+html,
+body {
     background-color: rgb(51, 196, 51);
+    overflow-x: hidden;
 }
 
-a
-{
+a {
     text-decoration: none;
-    color:  rgb(0, 51, 0);
+    color: rgb(0, 51, 0);
 }
 
-p
-{
+p {
     padding: 10px;
 }
 
-.section
-{
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.section {
     position: relative;
     height: 100vh;
     width: 100vw;
 }
 
-.flexcontain
-{
+.flexcontain {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
 
-.circle
-{
+.circle {
     border-radius: 50%;
 }
 
-.card
-{
+.card {
     padding: 10px;
     background-color: rgb(33, 166, 33);
     border-radius: 15px;
     word-wrap: break-word;
 }
 
-.pfp-tag
-{
+#IDCard>div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#IDCard>img {
+    position: relative;
+    width: 70%;
+    margin-top: -30%;
+    margin-left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+#description {
+    width: 30%;
+    min-height: 50%;
+}
+
+.pfp-tag {
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 20px;
     text-align: center;
     width: 90%;
-    background-color: rgb(184, 65, 28);
+    background-color: darkorange;
     font-size: 15px;
 }
 
-.shadow
-{
+.hover:hover {
+    transform: scale(1.05);
+}
+
+.shadow {
+    border: 1px solid green;
     box-shadow: 3px 3px green;
 }
 
-.nav
-{
+.nav {
     z-index: 100;
     background-color: rgb(51, 196, 51);
     opacity: 0.9;
@@ -76,124 +112,511 @@ p
     justify-content: center;
 }
 
-.nav > *
-{
+.nav>* {
     height: 100%;
     margin-left: 25px;
     margin-right: 25px;
     margin-top: 10px;
     margin-bottom: 10px;
+    padding: 3px;
+    border-radius: 5px;
 }
 
-.skills
-{
+.skills {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
     position: relative;
     margin: auto auto;
-    width: 50%;
+    min-width: 50%;
     min-height: 50%;
     border-radius: 20px;
 }
 
-.skill
-{
+.skill {
     width: 80%;
     margin-left: 10%;
+    display: flex;
+    flex-direction: column;
 }
 
-.skill > p
-{
+.skill>p {
     margin-left: 10%;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-.slider
-{
+.slider {
     height: 4px;
     margin: auto;
     width: 80%;
     border: 3px solid black;
+    border-radius: 5px;
 }
 
-.slider > div
-{
+.slider>div {
     height: 4px;
     width: 60%;
     background-color: rgb(162, 103, 103);
+    border-radius: 5px;
 }
 
-.Projects
-{
-    width: 80%;
-    height: 90%;
-    margin: auto;
+.Projects {
+    height: 100%;
     display: grid;
-    row-gap: 25px;
-    grid-template: 50% / 50% 50%;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 30% 30%;
+    /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 5rem;
 }
 
-.pjp
-{
-    margin: auto;
+.Projects>div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
 }
 
-.teste
-{
+.pjp {
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.pjp+p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    pointer-events: none;
+    display: none;
+}
+
+.teste {
     width: 25%;
     height: 50%;
     aspect-ratio: 1 / 1;
     position: relative;
 }
 
-.teste > div > img
-{
+.teste>div>img {
     width: 30%;
     margin-left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
     /*
     position: absolute;
     top: -15%;
     left: 35%;*/
 }
 
-.ttxt
-{
+.ttxt {
     height: auto;
     min-height: 70%;
     max-height: 40%;
+<<<<<<< HEAD
     overflow: scroll;
     font-size: 75%;
     margin-top: 40px;
+=======
+    overflow-y: scroll;
+    font-size: 100%;
+    border-radius: 10px;
+    /*border-radius: 8px;
+    border-style: inset;
+    border-width: 3px;
+    border-color: black;*/
+>>>>>>> 2190daf (betet)
 }
 
-.Contact
-{
-    width: 75%;
-    height: 50%;
+/* Hide scrollbar background */
+.ttxt::-webkit-scrollbar,
+.Pimg::-webkit-scrollbar {
+    width: 10px;
+    /* Adjust as needed */
+}
+
+.ttxt::-webkit-scrollbar-track,
+.Pimg::-webkit-scrollbar-track {
+    background: transparent;
+    /* Makes the background invisible */
+}
+
+.ttxt::-webkit-scrollbar-thumb,
+.Pimg::-webkit-scrollbar-thumb {
+    background: #225126;
+    /* Change scrollbar color */
+    border-radius: 5px;
+}
+
+.ttxt::-webkit-scrollbar-thumb:hover,
+.Pimg::-webkit-scrollbar-thumb:hover {
+    background: #142f16;
+}
+
+.Contact {
+    width: 70%;
+    height: auto;
     display: grid;
     grid: auto / 25% 25% 25% 25%;
+    row-gap: 25px;
     column-gap: 25px;
-    justify-content: center;
-    align-items:center
+    transform: translate(-50px, 0px);
 }
 
-.ContactItem
-{
-    
+.ContactItem {
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     vertical-align: middle;
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
 }
 
-.ContactItem > *
-{
+.ContactItem:hover {
+    transform: scale(1.05);
+}
+
+.ContactItem>* {
     position: relative;
     font-size: 10px;
     text-align: center;
-    padding: 0;
+    padding: 8px;
     margin: 0;
+}
+
+.Portfolio {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    width: 60%;
+    height: 75%;
+    background-color: rgb(47, 180, 47);
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1000;
+}
+
+.Pimg {
+    width: 40%; 
+    border-radius: 20px;
+    overflow-y: auto;
+    margin: 0.5rem 0.5rem;
+    margin-left: 1rem;
+    background-color: rgb(42, 160, 42);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+    max-height: 90%;
+}
+
+.Pimg img {
+    border-radius: 10px;
+}
+
+.Pdesc {
+    width: 60%; 
+    border-radius: 20px;
+    margin: 0.5rem 0.5rem;
+    margin-right: 1rem;
+    background-color: rgb(42, 160, 42);
+    padding: 2rem;
+    height: 80%;
+    overflow-y: auto;
+}
+
+.Pdesc h1 {
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.Pdesc p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.Pdesc a {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.Pdesc a:hover {
+    background-color: #0056b3;
+}
+
+.project-button {
+    margin-top: auto;
+    border-radius: 10px;
+    /* Rounded corners */
+    background-color: darkorange;
+    /* Button color */
+    color: white;
+    /* Text color */
+    padding: 10px 20px;
+    /* Padding for the button */
+    border: none;
+    /* Remove border */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 16px;
+    /* Font size */
+    transition: background-color 0.3s;
+    /* Smooth transition for hover effect */
+    width: 100%;
+    /* Full width */
+}
+
+.project-button:hover {
+    background-color: rgb(224, 123, 0);
+    /* Darker color on hover */
+}
+
+#pf_close{
+    visibility: hidden;
+}
+
+.flexdown {
+    display: flex;
+    /* Use flexbox */
+    flex-direction: column;
+    /* Stack items vertically */
+    justify-content: space-between;
+    /* Space between items */
+}
+
+#ContactBtn {
+    display: none;
+    bottom: 25px;
+    right: 15px;
+    position: fixed;
+    width: 200px;
+    height: 60px;
+    border-width: 1px;
+    border-color: rgb(181, 125, 4);
+    border-radius: 10px;
+    background-color: darkorange;
+    box-shadow: 3px 3px rgb(181, 125, 4);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .section {
+        width: 95vw;
+        min-height: fit-content;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    #_About {
+        flex-direction: column;
+        padding-top: 100px;
+        gap: 7.5%;
+    }
+
+    #description {
+        width: 80%;
+    }
+
+    #_Skills
+    {
+        padding-top: 25px;
+        padding-bottom: 0px;
+    }
+
+    .skills {
+        display: grid;
+        grid-template-columns: 100%;
+        position: relative;
+        margin: auto auto;
+        min-width: 80%;
+        min-height: 80%;
+        border-radius: 20px;
+    }
+
+    .skill {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    .skill>p {
+        margin-left: 4%;
+    }
+
+    .slider {
+        width: 90%;
+    }
+
+    .Projects {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 90%;
+        grid-template-rows: auto auto auto auto;
+        /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 5rem;
+    }
+    
+    .Projects>div {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .pjp {
+        height: 25vh;
+        max-width: 90vw;
+    }
+
+    #_testes{
+        padding-top: 50px;
+        flex-direction: column;
+    }
+
+    .teste {
+        margin-top: 25%;
+        aspect-ratio: 1 / 1;
+        width: 80%;
+        height: auto;
+        position: relative;
+    }
+
+    .teste > p:last-child
+    {
+        /*text gettign out of fuckin g bound*/
+    }
+
+    .Portfolio {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(47, 180, 47);
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 1000;
+    }
+    
+    .Pimg {
+        width: 90%;
+        overflow-y: auto;
+        margin: 0.5rem 0.5rem;
+        margin-left: 1rem;
+        background-color: rgb(42, 160, 42);
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 1rem;
+        max-height: 90%;
+    }
+    
+    .Pimg img {
+        border-radius: 10px;
+    }
+    
+    .Pdesc {
+        margin: 0.5rem 0.5rem;
+        margin-right: 1rem;
+        background-color: rgb(42, 160, 42);
+        padding: 2rem;
+        height: 80%;
+        overflow-y: auto;
+    }
+    
+    .Pdesc h1 {
+        margin-bottom: 1rem;
+        color: #ffffff;
+    }
+    
+    .Pdesc p {
+        margin-bottom: 2rem;
+        line-height: 1.6;
+        color: #ffffff;
+    }
+    
+    .Pdesc a {
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    
+    .Pdesc a:hover {
+        background-color: #0056b3;
+    }
+    
+    .project-button {
+        margin-top: auto;
+        border-radius: 10px;
+        /* Rounded corners */
+        background-color: darkorange;
+        /* Button color */
+        color: white;
+        /* Text color */
+        padding: 10px 20px;
+        /* Padding for the button */
+        border: none;
+        /* Remove border */
+        cursor: pointer;
+        /* Pointer cursor on hover */
+        font-size: 16px;
+        /* Font size */
+        transition: background-color 0.3s;
+        /* Smooth transition for hover effect */
+        width: 100%;
+        /* Full width */
+    }
+    
+    .project-button:hover {
+        background-color: rgb(224, 123, 0);
+        /* Darker color on hover */
+    }
+
+    #pf_close{
+        line-height: 100%;
+        font-size: 30px;
+        position: absolute;
+        bottom: 2px;
+        /*transform: translate(0,50%);*/
+        visibility: visible;
+        height: 40px;
+        width: 100px;
+        padding: 0px 025px;
+    }
 }

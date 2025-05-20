@@ -1,0 +1,32 @@
+{
+  "projects": [
+    {
+      "id": "project1",
+      "title": "AVR Project",
+      "description": "An embedded systems project using AVR microcontrollers to create an interactive device.",
+      "images": ["images/project1-1.jpg", "images/project1-2.jpg", "images/project1-3.jpg"],
+      "link": "https://github.com/yourusername/project1"
+    },
+    {
+      "id": "project2",
+      "title": "Falling Calamity",
+      "description": "An adaptation of 'Floor is Lava' as a 2D platformer. Made with Unity and C#.\n\nOriginally Made in a 12 hour Game Jam.",
+      "images": ["images/Screenshot (167).png", "images/Screenshot (172).png", "images/Screenshot (178).png"],
+      "link": "https://github.com/yourusername/project2"
+    },
+    {
+      "id": "project3",
+      "title": "AVR Project",
+      "description": "An embedded systems project using AVR microcontrollers to create an interactive device.",
+      "images": ["images/project1-1.jpg", "images/project1-2.jpg", "images/project1-3.jpg"],
+      "link": "https://github.com/yourusername/project1"
+    },
+    {
+      "id": "project4",
+      "title": "Crab the Crap",
+      "description": "A Game About fighting Ocean Junk! Made in 48 hours in a Game Jam.\n\nMade With Unity and C#.",
+      "images": ["images/0x0ss (1).png", "images/0x0ss (2).png", "images/0x0ss (3).png"],
+      "link": "https://github.com/yourusername/project2"
+    }
+  ]
+}
